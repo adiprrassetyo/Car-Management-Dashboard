@@ -1,0 +1,29 @@
+{
+  "name": "chapter-5",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "description": "Challenge Chapter 5",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adiprrassetyo/Chapter-5.git"
+  },
+  "author": "Adi Prasetyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adiprrassetyo/Chapter-5/issues"
+  },
+  "homepage": "https://github.com/adiprrassetyo/Chapter-5#readme"
+}
