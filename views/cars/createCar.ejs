@@ -1,0 +1,93 @@
+<!-- <h1 class="main-title fs-20 mt-3 mb-0 fw-bold">Add New Car</h1> -->
+<h1 class="main-title fs-20 mt-3 mb-0 fw-bold"><%= title%></h1>
+<%- include ('../messages') %>
+<form action="/cars/create" method="POST">
+  <div class="form-card py-3 px-3 mt-3">
+    <div class="row">
+      <label
+        class="
+          form-label
+          col-md-2
+          fs-12
+          col-form-label
+          d-flex
+          align-items-center
+        "
+        >Nama<span>&#42;</span></label
+      >
+      <div class="col-md-10">
+        <input
+          type="name"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Avanza"
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <label
+        class="
+          form-label
+          col-md-2
+          fs-12
+          col-form-label
+          d-flex
+          align-items-center
+        "
+        >Sewa Per Hari<span>&#42;</span></label
+      >
+      <div class="col-md-10">
+        <input
+          type="number"
+          class="form-control"
+          id="harga"
+          name="rentPrice"
+          placeholder="Rp 0,-"
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <label
+        class="
+          form-label
+          col-md-2
+          fs-12
+          col-form-label
+          d-flex
+          align-items-center
+        "
+        >Ukuran<span>&#42;</span></label
+      >
+      <div class="col-md-10">
+        <select name="type" class="form-select" name="ukuran">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <label class="form-label col-md-2 fs-12 col-form-label d-flex"
+        >Foto<span>&#42;</span></label
+      >
+      <div class="col-md-10">
+        <input
+          class="form-control"
+          type="text"
+          id="formFile"
+          name="image"
+          placeholder="/images/image_1.png"
+          style="height: 32px"
+        />
+        <div id="fileHelp" class="form-text">File size max. 2MB</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="btn-wrap">
+      <a class="btn btn-outline-primary fs-14" href="/"> Cancel </a>
+      <button type="submit" class="btn btn-primary fs-14 ms-3">Save</button>
+    </div>
+  </div>
+</form>
