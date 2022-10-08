@@ -57,7 +57,7 @@
           </button>
           </div>
           <div class="col-md-6">
-            <a
+            <button
               class="
                 edit_btn
                 font-weight-bold
@@ -67,10 +67,10 @@
                 justify-content-center
                 text-white
               "
-              href="/cars/update/<%= data.id%>"
+              onclick="location.href='/cars/update/<%= data.id%>'"
             >
               <img class="me-2" src="/images/fi_edit.png" alt="" />
-              Edit</a
+              Edit</button
             >
           </div>
         </div>
@@ -95,7 +95,7 @@
           if (result.isConfirmed) {
             Swal.fire("Terhapus!", "Data Mobil Terhapus!.", "success");
             setTimeout(function () {
-              window.location.href = "/cars/delete/<%= data.id%>";
+              window.location.href = "/cars/delete/"+id;
             }, 1000);
           } else if (result.dismiss === Swal.DismissReason.cancel) {
             Swal.fire("Batal Menghapus", "Data Mobil Tidak Dihapus", "error");

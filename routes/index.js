@@ -2,17 +2,14 @@ var express = require("express");
 var router = express.Router();
 const CarControl = require("../controller/carController");
 const { cars } = require("../models");
+const uploadCar = require("../middleware/upload")
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
 router.get("/", CarControl.getAllCars);
 
-router.get("/cars/create", function (req, res, next) {
+router.get("/cars/create",uploadCar, function (req, res, next) {
   res.render("cars/createCar", { url: req.url, title: "Add New Car" });
 });
-router.get("/cars/update/:id", CarControl.editCars);
+router.get("/cars/update/:id", uploadCar,CarControl.editCars);
 
 router.use("/cars", require("./car"));
 

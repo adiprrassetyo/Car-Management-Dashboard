@@ -1,7 +1,7 @@
 <!-- <h1 class="main-title fs-20 mt-3 mb-0 fw-bold">Update Car Information</h1> -->
-<h1 class="main-title fs-20 mt-3 mb-0 fw-bold"><%= title%></h1>
+<h1 class="main-title fs-20 mt-3 mb-0 fw-bold"><%=title%></h1>
 <%- include ('../messages') %>
-<form action="/cars/update/<%= data.id%>" method="POST">
+<form method="POST" action="/cars/update/<%=data.id%>"  enctype="multipart/form-data">
   <div class="form-card py-3 px-3 mt-3">
     <div class="row">
       <label
@@ -24,6 +24,7 @@
           value="<%= data.name %>"
           name="name"
           placeholder="Avanza"
+          style="width: 400px;""
         />
       </div>
     </div>
@@ -47,6 +48,7 @@
           value="<%= data.rentPrice %>"
           name="rentPrice"
           placeholder="Rp 0,-"
+          style="width: 400px;"
         />
       </div>
     </div>
@@ -63,13 +65,13 @@
         >Ukuran<span>&#42;</span></label
       >
       <div class="col-md-10">
-        <select class="form-select">
+        <select name="type" id="type" class="form-select" style="width: 400px; "> 
           <option hidden selected value="<%= data.type %>">
             <%= data.type %>
           </option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
         </select>
       </div>
     </div>
@@ -78,15 +80,18 @@
         >Foto<span>&#42;</span></label
       >
       <div class="col-md-10">
+        <div class="input-group" style="width: 400px;"> 
         <input
           class="form-control"
-          type="text"
+          type="file"
           id="formFile"
           value="<%= data.image %>"
           name="image"
           placeholder="/images/image_1.png"
           style="height: 32px"
         />
+        <span class="input-group-text" style="width: 50px; height: 32px; "><i class="bi bi-upload" style="width: 50px; height: 24px;"></i></span>
+        </div>
         <div id="fileHelp" class="form-text">File size max. 2MB</div>
       </div>
     </div>
@@ -94,7 +99,7 @@
   <div class="row">
     <div class="btn-wrap">
       <a class="btn btn-outline-primary fs-14" href="/"> Cancel </a>
-      <button type="submit" class="btn btn-primary fs-14 ms-3">Save</button>
+      <button  type="submit" class="btn btn-primary fs-14 ms-3">Save</button>
     </div>
   </div>
 </form>
