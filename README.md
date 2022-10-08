@@ -4,7 +4,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/adiprrassetyo/Chapter-5.git
+   git clone https://github.com/adiprrassetyo/Car-Management-Dashboard.git
    ```
 2. Install packages
    ```sh
