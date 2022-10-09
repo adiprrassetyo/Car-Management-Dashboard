@@ -24,14 +24,14 @@
 # ERD
 ![image.png](erd.png)
 
-Client Side
+#Client Side
 1. Halaman Index (GET) = http://localhost:3000/
 2. Halaman Edit Car (POST) = http://localhost:3000/cars/update/:id
 3. Halaman Create Car (POST) = http://localhost:3000/cars/create
 4. Delete (GET) = http://localhost:3000/cars/delete/:id
 
-API Side
-1. GET("/api/v1/cars") : untuk mendapatkan semua data mobil 
-2. POST("/api/v1/cars") : untuk create data mobil 
-3. PUT("/api/v1/cars/:id") : untuk memperbarui data mobil 
-4. DELETE("/api/v1/cars/:id") : untuk menghapus data mobil
+#API Side
+1. Create Car (POST) = http://localhost:3000/api/v1/cars
+2. Read All Cars (GET) = http://localhost:3000/api/v1/cars
+4. Update Car (PUT) = http://localhost:3000/api/v1/cars/:id
+5. Delele Car (DELETE) = http://localhost:3000//api/v1/cars/:id
