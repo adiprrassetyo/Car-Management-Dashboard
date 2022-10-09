@@ -14,8 +14,8 @@
 
    ```sh
    - setting config.js with your database, in my case i use xampp/mysql
-   - npx sequelize db:create
-   - npx sequelize db:migrate
+   - npm run create
+   - npm run migrate
    ```
 
 4. Run
