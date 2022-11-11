@@ -11,7 +11,7 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
-  sequelize = new Sequelize(process.env[DB_URL]);
+  sequelize = new Sequelize(DB_URL);
 
 
 fs
